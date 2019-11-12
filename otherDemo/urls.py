@@ -70,6 +70,9 @@ ali_urlpatterns = [
 ]
 
 urlpatterns = [
+    # `email` 示例
+    url(r'^email/', include(email_urlpatterns)),
+
     # `admin` 路由
     url(r'^admin/', admin.site.urls),
     # `sentry` 示例
@@ -80,8 +83,6 @@ urlpatterns = [
     url(r'^log/', include(logging_urlpatterns)),
     # `video` 示例(路飞视频业务)
     url(r'^video/', include(video_urlpatterns)),
-    # `email` 示例
-    url(r'^email/', include(email_urlpatterns)),
     # `jwt` 示例
     url(r'^jwt/', include(jwt_urlpatterns)),
     # `读写分离` 示例

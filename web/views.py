@@ -62,8 +62,9 @@ def send_mail(request):
 
     # 如果发送内容为`html`格式的话, 多传 `html_message`
     result = send_mail(
-        "你好", "世界", "admin@luffycity.com", ["404042726@qq.com", ],
+        "你好", "世界", "18803561683@163.com", ["404042726@qq.com", ],
     )
+    # 扩展 添加附件
     print(result)
 
     return HttpResponse("Ok")
