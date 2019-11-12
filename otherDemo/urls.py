@@ -72,6 +72,8 @@ ali_urlpatterns = [
 urlpatterns = [
     # `email` 示例
     url(r'^email/', include(email_urlpatterns)),
+    # 阿里
+    url(r'^ali/', include(ali_urlpatterns)),
 
     # `admin` 路由
     url(r'^admin/', admin.site.urls),
@@ -89,8 +91,7 @@ urlpatterns = [
     url(r'^rw/', include(rw_urlpatterns)),
     # 微信相关
     url(r'^wx', include(wx_urlpatterns)),
-    # 阿里
-    url(r'^ali', include(ali_urlpatterns)),
+
     # celery
     url(r'celery', include(celery_urlpatterns)),
 
